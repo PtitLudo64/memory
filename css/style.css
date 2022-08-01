@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "cheri";
+    src: url(../font/cheri/CHERL___.TTF);
+}
+@font-face {
+    font-family: "chicken";
+    src: url(../font/chicken_pie/CHICKEN_Pie.ttf);
+}
+:root {
+    --txt-primary: #fff;
+    --largCase: 150px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-family: 'cheri';
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--txt-primary);
+}
+
+.jeu {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 80%;
+    width: calc(4*var(--largCase));
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1px;
+}
+
+.case {
+    width: 150px;
+    aspect-ratio: 1;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    transition: all 0.5s ease-in-out;
+}
+.case img {
+    width: 100%;
+    height: 100%;
+}
+#modale {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 30vh;
+    transform: translate(-50%,-10%);
+    border-radius: 20px;
+    border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#modale p {
+    color: var(--txt-primary);
+    font-family: 'chicken', sans-serif;
+    font-size: 2em;
+}
+#modale button {
+    margin-top: 1rem;
+    font-family: 'chicken', sans-serif;
+    font-size: 2em;
+    background-color: red;
+    color: var(--txt-primary);
+    padding: 1rem;
+    border-radius: 10px;
+}
